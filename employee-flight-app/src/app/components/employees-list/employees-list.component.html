@@ -10,8 +10,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let employee of workers">
-                <td>{{ employee.name }}</td>
-
+                <td [class.selected]="employee === selectedEmployee" (click)="onSelect(employee.id)">
+                    {{ employee.name }}
+                </td>
             </tr>
         </tbody>
     </table>

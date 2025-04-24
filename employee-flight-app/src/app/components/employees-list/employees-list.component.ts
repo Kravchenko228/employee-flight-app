@@ -1,5 +1,5 @@
 import { EmployeesService } from "../../services/employees.service";
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { CommonModule } from "@angular/common";
 
@@ -13,11 +13,19 @@ import { CommonModule } from "@angular/common";
 export class EmployeesListComponent implements OnInit {
     workers: any[] = [];
     errorMessage: string = '';
+    selectedEmployee: any;
 
     constructor(private employeesService: EmployeesService) { }
 
+    @Output() employeeSelected = new EventEmitter<string>();
+
     ngOnInit(): void {
         this.getWorkers();
+    }
+
+    onSelect(workerId: string): void {
+        this.selectedEmployee = this.workers.find(w => w.id === workerId);
+        this.employeeSelected.emit(workerId);
     }
 
     getWorkers(): void {
