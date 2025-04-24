@@ -1,0 +1,17 @@
+<div class="employees-list">
+    <h2>Workers</h2>
+    <table>
+        <thead>
+            <tr>
+
+                <th>Name</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of workers">
+                <td>{{ employee.name }}</td>
+
+            </tr>
+        </tbody>
+    </table>
