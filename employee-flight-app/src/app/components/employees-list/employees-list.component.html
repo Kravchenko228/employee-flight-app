@@ -1,0 +1,18 @@
+<div class="employees-list">
+    <h2>Workers</h2>
+    <table>
+        <thead>
+            <tr>
+
+                <th>Name</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of workers">
+                <td [class.selected]="employee === selectedEmployee" (click)="onSelect(employee.id)">
+                    {{ employee.name }}
+                </td>
+            </tr>
+        </tbody>
+    </table>

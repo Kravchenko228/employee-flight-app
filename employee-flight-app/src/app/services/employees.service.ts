@@ -13,6 +13,6 @@ export class EmployeesService {
 
   constructor(private http: HttpClient) { }
   getWorkers(): Observable<any> {
-    return this.http.get(this.apiUrl, { params: { endpoint: this.workersEndpoint }, headers: { Accept: 'application/json' } });
+    return this.http.get('/api/workers');
   }
 }

@@ -1,0 +1,28 @@
+<div class="flights-table" *ngIf="flights.length">
+    <h3>Flights</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Origin</th>
+                <th>Origin Date</th>
+                <th>Destination</th>
+                <th>Destination Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights" [class.selected]="flight === selectedFlight"
+                (click)="selectFlight(flight)">
+                <td>{{ flight.flightNumber }}</td>
+                <td>{{ flight.origin }}</td>
+                <td>{{ flight.originDate }}</td>
+                <td>{{ flight.destination }}</td>
+                <td>{{ flight.destinationDate }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="!flights.length">
+    <p>No flights found for this worker.</p>
+</div>
