@@ -4,14 +4,14 @@ import { EmployeesListComponent } from './components/employees-list/employees-li
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Flight } from './models/flight.model';
-
+import { FlightInfoComponent } from './components/flight-info/flight-info.component';
 import { FlightsTableComponent } from './components/flights-table/flights-table.component';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, HttpClientModule, EmployeesListComponent, FlightsTableComponent],
+  imports: [CommonModule, HttpClientModule, EmployeesListComponent, FlightsTableComponent, FlightInfoComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

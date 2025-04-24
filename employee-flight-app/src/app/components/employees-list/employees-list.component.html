@@ -9,10 +9,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let employee of workers">
-                <td [class.selected]="employee === selectedEmployee" (click)="onSelect(employee.id)">
-                    {{ employee.name }}
-                </td>
+            <tr *ngFor="let employee of workers" [class.selected]="employee === selectedEmployee"
+                (click)="onSelect(employee.id)">
+                <td>{{ employee.name }}</td>
+
             </tr>
         </tbody>
     </table>

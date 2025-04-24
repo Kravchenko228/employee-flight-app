@@ -32,6 +32,9 @@ export class EmployeesListComponent implements OnInit {
         this.employeesService.getWorkers().subscribe(
             (data: any) => {
                 this.workers = data;
+                if (data.length) {
+                    this.selectEmployee(data[0]);
+                }
             },
             (error: any) => {
                 this.errorMessage = 'Error fetching workers data';
@@ -39,4 +42,9 @@ export class EmployeesListComponent implements OnInit {
             }
         );
     }
+    selectEmployee(employee: any): void {
+        this.selectedEmployee = employee;
+        this.employeeSelected.emit(employee.id);
+    }
+
 }

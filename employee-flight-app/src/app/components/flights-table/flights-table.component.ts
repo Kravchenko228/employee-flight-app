@@ -22,8 +22,11 @@ export class FlightsTableComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['workerId'] && this.workerId) {
+      this.clearTimer();
       this.loadFlights();
-      this.startAutoRefresh();
+
+      this.clearTimer();
+      this.startTimer();
     }
   }
 
@@ -42,16 +45,27 @@ export class FlightsTableComponent implements OnChanges {
     this.selectedFlight = flight;
     this.flightSelected.emit(flight);
   }
+  startTimer(): void {
+    this.timer = setInterval(() => {
 
-  startAutoRefresh(): void {
+      this.loadFlights();
+    }, 60000);
+  }
+  clearTimer(): void {
     if (this.timer) {
       clearInterval(this.timer);
+      this.timer = null;
     }
-    this.timer = setInterval(() => this.loadFlights(), 60000);
   }
+
+
   onFlightSelect(flight: Flight) {
     this.selectedFlight = flight;
     this.flightSelected.emit(flight);
+  }
+
+  ngOnDestroy(): void {
+    this.clearTimer();
   }
 
 }
