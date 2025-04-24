@@ -1,4 +1,15 @@
-<div style="display: flex;gap: 20px; padding: 20px;">
+<!--<div style="display: flex;gap: 20px; padding: 20px;">
   <app-employees-list (employeeSelected)="onWorkerSelected($event)"></app-employees-list>
 
+  <app-flights-table [workerId]="selectedWorkerId" (flightSelected)="onFlightSelected($event)" />-->
+<div style="display: flex; gap: 20px; padding: 20px;">
+
+  <app-employees-list (employeeSelected)="onWorkerSelected($event)"></app-employees-list>
+
+
+
   <app-flights-table [workerId]="selectedWorkerId" (flightSelected)="onFlightSelected($event)" />
+
+  <app-flight-info [flight]="selectedFlight" />
+
+</div>

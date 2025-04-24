@@ -67,3 +67,8 @@ button.delete {
 button:hover {
     opacity: 0.9;
 }
+
+.selected {
+    background-color: #e8f4ff;
+    font-weight: bold;
+}

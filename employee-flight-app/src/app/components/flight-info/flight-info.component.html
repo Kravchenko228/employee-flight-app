@@ -2,7 +2,7 @@
     <h3>Flight Details</h3>
     <p><strong>Flight Number:</strong> {{ flight.flightNumber }}</p>
     <p><strong>Plane Number:</strong> {{ flight.planeNumber }}</p>
-    <p><strong>Duration:</strong> {{ flight.duration }} minutes</p>
+    <p><strong>Duration:</strong> {{ flight.duration| duration }} </p>
     <p><strong>Origin Gate:</strong> {{ flight.originGate }}</p>
     <p><strong>Destination Gate:</strong> {{ flight.destinationGate }}</p>
 </div>
