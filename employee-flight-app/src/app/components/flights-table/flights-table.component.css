@@ -3,12 +3,57 @@
 }
 
 table {
-    width: 100%;
+    width: 130%;
+
     border-collapse: collapse;
+    margin: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
+
+
 }
 
 td,
 th {
     padding: 0.5rem;
     border: 1px solid #ccc;
+}
+
+/*flights-table*/
+.flights-table {
+    margin: 15px;
+}
+
+.flights-table h2 {
+    margin-bottom: 10px;
+}
+
+
+
+.flights-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flights-table th,
+.flights-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.flights-table th {
+    background-color: #f2f2f2;
+}
+
+.flights-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.flights-table tr.selected {
+    background-color: #d1eaff;
 }
