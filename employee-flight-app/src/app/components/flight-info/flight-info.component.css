@@ -1,0 +1,38 @@
+/* flight info.component.css */
+
+.flight-info {
+
+
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: left;
+    padding: 5px;
+
+
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #d1eaff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    max-width: 800px;
+    margin-left: auto;
+}
+
+.flight-info h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.flight-info p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.flight-info strong {
+    font-weight: bold;
+    color: #030303;
+}
